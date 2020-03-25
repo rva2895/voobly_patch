@@ -6,9 +6,12 @@
 #endif
 
 #include <Windows.h>
+#include "common.h"
 
-#define USERPATCH_VERSION "EXE Patch v2.1 " __DATE__ " " __TIME__
-#define EXE_PATCH_VERSION "2.1"
+#define EXE_PATCH_VERSION "2.2"
+#define USERPATCH_VERSION "EXE Patch v2.23 (" EXE_PATCH_VERSION ") " __DATE__ " " __TIME__
+
+#define REGPATH "Software\\Voobly\\Voobly\\game\\16\\EXE Patch"
 
 struct UserPatchConfig_t
 {

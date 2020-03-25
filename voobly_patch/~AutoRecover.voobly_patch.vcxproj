@@ -100,7 +100,6 @@
     <ClInclude Include="minimap.h" />
     <ClInclude Include="mouseoverride.h" />
     <ClInclude Include="network.h" />
-    <ClInclude Include="notify.h" />
     <ClInclude Include="rec.h" />
     <ClInclude Include="recbrowse.h" />
     <ClInclude Include="recordrestore.h" />
@@ -127,7 +126,6 @@
     <ClCompile Include="minimap.cpp" />
     <ClCompile Include="mouseoverride.cpp" />
     <ClCompile Include="network.cpp" />
-    <ClCompile Include="notify.cpp" />
     <ClCompile Include="rec.cpp" />
     <ClCompile Include="recbrowse.cpp" />
     <ClCompile Include="recordrestore.cpp" />

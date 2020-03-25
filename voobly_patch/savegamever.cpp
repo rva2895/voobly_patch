@@ -24,13 +24,25 @@ char ver[4];
 void __stdcall displayVersionError(void* ptr)
 {
 	char buf[0x100];
+	char s2[0x100];
 	ver[3] = 0;
 	if (!strcmp(ver, "9.4"))
+	{
 		strcpy(ver, "1.1");
-	sprintf(buf, "This file was recorded with a different version of the game\n"
-		"Current version: " EXE_PATCH_VERSION ", "
-		"File version: %s",
-		ver);
+		strcpy(s2, "\nTurn Data Patch off to watch this game");
+	}
+	else if (!strcmp(ver, "2.2"))
+		strcpy(s2, "\nTurn Data Patch on to watch this game");
+	else
+		strcpy(s2, "");
+
+	if (strcmp(ver, EXE_PATCH_VERSION))
+		sprintf(buf, "This file was recorded with a different version of the game\n"
+			"Current version: " EXE_PATCH_VERSION ", "
+			"File version: %s%s",
+			ver, s2);
+	else
+		sprintf(buf, "Cannot load that saved game");
 
 	errorScreen(buf, 0, 450, 100, 1, ptr);
 }
